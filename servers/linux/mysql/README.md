@@ -67,6 +67,14 @@
 -   firewall-cmd --zone=public --add-port=3306/tcp --permanent
 -   firewall-cmd --reload
 
+####  windows 免密启动
+-   mysqld --console --skip-grant-tables --shared-memory   管理员权限
+-   update user set authentication_string='' where user='root';
+
+####  bin目录下
+-   mysqld --install
+-   mysqld --initialize-insecure    初始化
+
 
 
 
