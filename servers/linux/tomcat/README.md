@@ -47,6 +47,7 @@ and "journalctl -xe" for details.
 ~~~text
 export JAVA_HOME=/opt/jdk1.8  
 export JRE_HOME=/opt/jdk1.8/jre
+export JENKINS_HOME=/opt/tomcat8/webapps/jenkins
 ~~~
 
 -   如果报错权限不足，即可先删除logs下所有root权限日志

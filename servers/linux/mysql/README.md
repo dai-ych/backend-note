@@ -73,7 +73,60 @@
 
 ####  bin目录下
 -   mysqld --install
--   mysqld --initialize-insecure    初始化
+-   mysqld --initialize-insecure --console    初始化
+
+
+####  mysql8  配置文件  windows - my.ini   linux - /etc/my.cnf
+```text
+[mysqld]
+# 授权自动激活
+activate_all_roles_on_login = true
+# 允许连接失败的次数
+max_connect_errors=1000
+# 允许最大连接数
+max_connections=200
+# 服务端使用的字符集默认为UTF8
+character-set-server=utf8
+# # 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+# 默认使用“mysql_native_password”插件认证
+default_authentication_plugin=mysql_native_password
+
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
+port=3306
+
+skip-name-resolve
+max_allowed_packet = 500M
+wait_timeout=2880000
+interactive_timeout = 2880000
+tmp_table_size = 256M
+net_read_timeout = 60
+connect_timeout = 60
+
+
+read_buffer_size = 2M
+read_rnd_buffer_size = 8M
+#sort_buffer_size = 8M
+#join_buffer_size = 8M
+#innodb_log_buffer_size = 2M
+#innodb_log_files_in_group = 3
+#table_cache = 128
+# 自动清理日志
+expire_logs_days=7
+
+[mysql]
+# 设置mysql客户端默认字符集
+default-character-set=utf8
+[client]
+# 设置mysql客户端连接服务端时默认使用的端口
+port=3306
+default-character-set=utf8
+
+```
 
 
 
