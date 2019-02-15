@@ -26,3 +26,6 @@
 -   git merge 分支名称              //快速合并到有新版本的另一个分支
 -   git branch -d 名称              //删除分支
 -   git branch 分支名称             //切换分支
+
+####    查看进程
+-   ps -ef|grep tomcat
