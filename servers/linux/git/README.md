@@ -5,6 +5,8 @@
 
 
 #####  下载解压git后
+-   wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.20.1.tar.gz
+-   tar -xzvf git.tar.gz
 -   cd git-2.9.2
 -   make prefix=/usr/local/git all   // 指向目录编译
 -   make prefix=/usr/local/git install  //指向目录安装
@@ -29,3 +31,9 @@
 
 ####    查看进程
 -   ps -ef|grep tomcat
+
+
+-   ssh-keygen -t rsa
+-   scp id_rsa.pub  git@144.202.23.231:/home/git/.ssh/authorized_keys     远程推送密钥
+-   chmod 700 /home/git/.ssh                             权限必须为700 
+-   chmod 600 /home/git/.ssh/authorized_keys             权限必须为600
