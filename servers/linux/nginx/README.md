@@ -73,3 +73,31 @@ WantedBy=multi-user.target
 ```
 -   chmod 755 nginx.service 
 -   systemctl daemon-reload
+
+
+####    验证nginx配置文件是否正确
+-   进入nginx安装目录sbin下，输入命令./nginx -t
+-   ps -ef|grep nginx    查看进程
+
+
+####    nginx.conf
+~~~text
+server
+        {
+        listen       80;
+        server_name  jenkins.vpeve.com;
+        #root        /opt/tomcat8/webapps/jenkins;
+        location / {
+            rewrite ^/(.*)$ http://jenkins.vpeve.com/jenkins;
+        }
+        location /jenkins {
+            proxy_pass http://localhost:8888/jenkins;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_redirect off;
+
+        }
+    }
+
+~~~

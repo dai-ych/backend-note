@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff081e21-a07e-473f-9af9-08c0ebeb31e3" name="Default" comment="update">
-      <change afterPath="$PROJECT_DIR$/servers/linux/jenkins/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servers/linux/common/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servers/linux/git/gitlab/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/maven/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servers/linux/git/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/servers/linux/git/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servers/linux/common/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/servers/linux/common/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servers/linux/nginx/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/servers/linux/nginx/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servers/linux/port/cenos7/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/servers/linux/port/cenos7/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +51,24 @@
     <session id="-1734614263">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="18" />
+          <entry key="Markdown" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1" />
-          <entry key="Markdown" value="2052" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Markdown" value="2509" />
+          <entry key="PLAIN_TEXT" value="60" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -104,11 +105,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/linux/port/cenos7/README.md">
+        <entry file="file://$PROJECT_DIR$/servers/linux/common/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="81">
-                <caret line="3" column="35" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="38" />
+              <first_editor relative-caret-position="108">
+                <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -116,23 +117,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/linux/tomcat/README.md">
+        <entry file="file://$PROJECT_DIR$/servers/linux/nginx/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1041">
-                <caret line="55" selection-start-line="55" selection-end-line="55" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/linux/mysql/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="285">
-                <caret line="86" selection-start-line="86" selection-end-line="86" />
+              <first_editor relative-caret-position="1095">
+                <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
               </first_editor>
               <second_editor />
             </state>
@@ -140,35 +129,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/servers/linux/nginx/README.md">
+        <entry file="file://$PROJECT_DIR$/servers/linux/port/cenos7/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="933">
-                <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/servers/linux/git/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="648">
-                <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/Redis/lock.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="621">
-                <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <first_editor relative-caret-position="81">
+                <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -190,11 +155,14 @@
         <option value="$PROJECT_DIR$/servers/linux/jdk.md" />
         <option value="$PROJECT_DIR$/tools/Redis/lock.md" />
         <option value="$PROJECT_DIR$/servers/linux/jdk/README.md" />
-        <option value="$PROJECT_DIR$/servers/linux/git/README.md" />
         <option value="$PROJECT_DIR$/servers/linux/tomcat/README.md" />
-        <option value="$PROJECT_DIR$/servers/linux/port/cenos7/README.md" />
         <option value="$PROJECT_DIR$/servers/linux/mysql/README.md" />
+        <option value="$PROJECT_DIR$/servers/linux/git/gitlab/README.md" />
+        <option value="$PROJECT_DIR$/tools/maven/README.md" />
+        <option value="$PROJECT_DIR$/servers/linux/git/README.md" />
+        <option value="$PROJECT_DIR$/servers/linux/common/README.md" />
         <option value="$PROJECT_DIR$/servers/linux/nginx/README.md" />
+        <option value="$PROJECT_DIR$/servers/linux/port/cenos7/README.md" />
       </list>
     </option>
   </component>
@@ -232,6 +200,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,6 +242,13 @@
               <item name="backend-note" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
               <item name="linux" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="backend-note" type="462c0819:PsiDirectoryNode" />
+              <item name="servers" type="462c0819:PsiDirectoryNode" />
+              <item name="linux" type="462c0819:PsiDirectoryNode" />
               <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,21 +256,23 @@
               <item name="backend-note" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
               <item name="linux" type="462c0819:PsiDirectoryNode" />
-              <item name="jdk" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="gitlab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend-note" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
               <item name="linux" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+              <item name="port" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="backend-note" type="462c0819:PsiDirectoryNode" />
               <item name="servers" type="462c0819:PsiDirectoryNode" />
               <item name="linux" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="port" type="462c0819:PsiDirectoryNode" />
+              <item name="cenos7" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend-note" type="b2602c69:ProjectViewProjectNode" />
@@ -330,13 +308,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550043300722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550641961672" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -410,7 +388,14 @@
       <workItem from="1548668385533" duration="13381000" />
       <workItem from="1548813096752" duration="14482000" />
       <workItem from="1549991866104" duration="3184000" />
-      <workItem from="1550034333536" duration="4984000" />
+      <workItem from="1550034333536" duration="5078000" />
+      <workItem from="1550194846280" duration="8198000" />
+      <workItem from="1550220168581" duration="2230000" />
+      <workItem from="1550453997981" duration="10162000" />
+      <workItem from="1550494230606" duration="69000" />
+      <workItem from="1550541627795" duration="3595000" />
+      <workItem from="1550635921857" duration="543000" />
+      <workItem from="1550640767444" duration="1030000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1548668312251</created>
@@ -433,24 +418,36 @@
       <option name="project" value="LOCAL" />
       <updated>1548741579768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1550043337215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550043337215</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1550475840510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550475840510</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81519000" />
+    <option name="totallyTimeSpent" value="107440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24333996" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25924453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="SonarLint" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -463,6 +460,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="SonarLint" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -558,11 +556,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servers/linux/port/cenos7/README.md">
+    <entry file="file://$PROJECT_DIR$/servers/linux/mysql/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="81">
-            <caret line="3" column="35" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="38" />
+          <first_editor relative-caret-position="1176">
+            <caret line="86" selection-start-line="86" selection-end-line="86" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/linux/git/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1026">
+            <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/linux/tomcat/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1107">
+            <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/maven/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="540">
+            <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/linux/git/gitlab/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="594">
+            <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>
@@ -578,41 +616,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/servers/linux/mysql/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="86" selection-start-line="86" selection-end-line="86" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/linux/git/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="648">
-            <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/servers/linux/tomcat/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1041">
-            <caret line="55" selection-start-line="55" selection-end-line="55" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/servers/linux/nginx/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="933">
-            <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <first_editor relative-caret-position="1095">
+            <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/linux/common/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="108">
+            <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servers/linux/port/cenos7/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="81">
+            <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>
