@@ -1,6 +1,7 @@
 
 ####  一、查看端口
 -   netstat -anp           //查询已开放的端口
+-   netstat -nlp |grep :8083        //查看端口是否被占用
 -   firewall-cmd --query-port=3306/tcp         //查询指定端口是否已开 
 -   firewall-cmd --zone=public --list-ports    // 查看已开放的全部端口
 -   firewall-cmd --zone=public --remove-port=82/tcp --permanent      //关闭端口
