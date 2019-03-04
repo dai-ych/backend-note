@@ -21,3 +21,5 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 L
 tools/Git/git常用命令.md,1\e\1ef1f0647109e3f8f7fa9eb16b581c8819a7f996
+K
+servers/linux/jdk/README.md,b\4\b4f337b3731f92faab6dc65da2a1bd51303995b9
