@@ -2,8 +2,9 @@
 -   yum install  gcc 
 
 #####  下载解压redis
--   wget XXXX
--   tar -xzvf redis.tar.gz /usr/local/redis
+-   cd /usr/local
+-   wget http://120.52.51.19/download.redis.io/releases/redis-5.0.3.tar.gz
+-   tar -xzvf redis-5.0.3.tar.gz /usr/local/redis
 -   cd redis
 -   make MALLOC=libc   // 编译
 -   cd src
@@ -11,12 +12,25 @@
 -   redis-cli -v    // 查看版本
 
 
-####    配置redis 以后台进程方式启动  
--   默认port:6379
--   /usr/local/redis/redis.conf：    daemonize no   将值改为yes 保存退出                     
+####    配置redis 
+-   进入/usr/local/redis/redis.conf  
+-   port:6379       //默认端口
+-   bind 0:0:0:0    //不限制外网ip访问
+-   daemonize yes    //可在后台执行   
+-   protected-mode  no        //解除保护 
+-   requirepass  密码       //设置redis远程连接密码     
+-   maxmemory 751619276       //最大内存：0.75G   单位byte
+-   maxmemory-policy volatile-lru           //内存回收算法
+~~~text
+过期策略详解
+volatile-lru -> 根据LRU算法生成的过期时间来删除。
+allkeys-lru -> 根据LRU算法删除任何key。
+volatile-random -> 根据过期设置来随机删除key。
+allkeys->random -> 无差别随机删。
+volatile-ttl -> 根据最近过期时间来删除（辅以TTL）
+noeviction -> 谁也不删，直接在写操作时返回错误
+~~~
 -   /usr/local/bin/redis-server /usr/local/redis/redis.conf       //指定redis.conf文件启动
--   设置redis远程连接：.因为redis默认设置允许本地连接，所以我们要将redis.conf中将bind 127.0.0.1 改为bind 0.0.0.0或者注释该行
--   requirepass   密码       //在redis.conf中搜索requirepass这一行，设置redis连接密码
 
 
 ####    查看进程
@@ -58,4 +72,10 @@ WantedBy=multi-user.target
 -   systemctl is-enabled redis.service    //查看是否开机自启
 -   systemctl start redis.service
 -   firewall-cmd --zone=public --add-port=6379/tcp --permanent   开放端口
+
+
+-   redis-cli 进入redis
+-   auth "密码"
+-   info memory   //查看内存
+
   
