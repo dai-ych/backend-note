@@ -6,6 +6,7 @@
 
 ####  二、下载mysql8
 -   Centos7 属于Red Hat系统，选择相应版本下载 RPM Bundle
+-   wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.15-1.el7.x86_64.rpm-bundle.tar
 
 ####  三、安装mysql依赖包（选做）
 -   yum -y install libaio.so.1 libgcc_s.so.1 libstdc++.so.6
@@ -32,12 +33,12 @@
 
 ####  七、登陆mysql
 -   mysql -u root -p
--   初次登陆必须修改密码：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root@123';
+-   初次登陆必须修改密码：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root@123456';
 -   刷新：flush privileges;    
 -   退出：exit;
 
 ####  八、修改mysql配置文件 /etc/my.cnf
--  [mysqld]default_password_lifetime=0   // 密码永不过期
+
 
 ####  创建用户
 -   select host,user,authentication_string,plugin from user;  //查询用户信息
@@ -79,6 +80,8 @@
 ####  mysql8  配置文件  windows - my.ini   linux - /etc/my.cnf
 ```text
 [mysqld]
+# 密码永不过期
+default_password_lifetime=0
 # 授权自动激活
 activate_all_roles_on_login = true
 # 允许连接失败的次数

@@ -3,6 +3,9 @@
 -  启动/重启/停止服务： systemctl start/restart/stop name.service
 -  查看服务状态：  systemctl status name.service
 
+####    下载
+-   https://tomcat.apache.org/download-80.cgi
+
 
 -  tomcat增加启动参数:
    tomcat 需要增加一个pid文件:
