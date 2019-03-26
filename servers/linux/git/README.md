@@ -18,6 +18,7 @@
 -   groupadd git //创建用户组
 -   useradd -g git git  //创建账号
 -   passwd git   
+-   chown -R git:git /usr/local/git
 -   git init --bare website.git    // 创建仓库
 -   chown -R git:git website.git    // 授权
 
@@ -29,8 +30,9 @@
 -   git branch -d 名称              //删除分支
 -   git branch 分支名称             //切换分支
 
-####    查看进程
--   ps -ef|grep tomcat
+####    设置用户只能拉取和推送代码权限
+-   vim /etc/passwd    
+-   git:x:1000:1000::/home/git:/bin/git-shell
 
 
 -   ssh-keygen -t rsa

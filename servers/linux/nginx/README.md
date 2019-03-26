@@ -5,28 +5,27 @@
 -   yum install -y openssl openssl-devel
 
 ####    nginx下载
--   https://nginx.org/en/download.html
-
+-   https://nginx.org/en/download.html       //下载页
+-   wget https://nginx.org/download/nginx-1.15.9.tar.gz
 
 ####    配置
--   ./configure
+-   ./configure --prefix=/usr/local/nginx/      // 未指定路径时默认安装在/usr/local/nginx/
 ```text
 nginx path prefix: "/usr/local/nginx"
-  nginx binary file: "/usr/local/nginx/sbin/nginx"
-  nginx modules path: "/usr/local/nginx/modules"
-  nginx configuration prefix: "/usr/local/nginx/conf"
-  nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
-  nginx pid file: "/usr/local/nginx/logs/nginx.pid"
-  nginx error log file: "/usr/local/nginx/logs/error.log"
-  nginx http access log file: "/usr/local/nginx/logs/access.log"
-  nginx http client request body temporary files: "client_body_temp"
-  nginx http proxy temporary files: "proxy_temp"
-  nginx http fastcgi temporary files: "fastcgi_temp"
-  nginx http uwsgi temporary files: "uwsgi_temp"
-  nginx http scgi temporary files: "scgi_temp"
+nginx binary file: "/usr/local/nginx/sbin/nginx"
+nginx modules path: "/usr/local/nginx/modules"
+nginx configuration prefix: "/usr/local/nginx/conf"
+nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+nginx error log file: "/usr/local/nginx/logs/error.log"
+nginx http access log file: "/usr/local/nginx/logs/access.log"
+nginx http client request body temporary files: "client_body_temp"
+nginx http proxy temporary files: "proxy_temp"
+nginx http fastcgi temporary files: "fastcgi_temp"
+nginx http uwsgi temporary files: "uwsgi_temp"
+nginx http scgi temporary files: "scgi_temp"
 ```
--   make        编译安装
--   make install
+-   make && make install      编译安装
 -   cd /usr/local/nginx/sbin/     启动停止nginx
 -   ./nginx 
 -   ./nginx -s stop         此方式相当于先查出nginx进程id再使用kill命令强制杀掉进程。
