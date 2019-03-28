@@ -1,6 +1,6 @@
 ####    指令
 -   mvn clean -pl com.canopus.website:webapp-backend -am         对指定模块及其依赖模块打包
--   或者  mvn clean -pl webapp-backend -am                    
+-   或者  mvn clean compile -U -pl webapp-backend -am                    
 ~~~test
 参数	全称	释义	说明
 -pl	--projects	Build specified reactor projects instead of all projects	

@@ -49,7 +49,7 @@ chmod 755 rc.local
 ```
 
 
-####  增加tomcat systemctl启动：
+####  增加nginx systemctl启动：
 -    在/usr/lib/systemd/system目录下增加nginx.service：
 ```text
 [Unit]
