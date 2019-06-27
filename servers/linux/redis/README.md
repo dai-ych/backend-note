@@ -77,5 +77,8 @@ WantedBy=multi-user.target
 -   redis-cli 进入redis
 -   auth "密码"
 -   info memory   //查看内存
+-   info clients  //查看连接数
+-   CONFIG GET maxclients  //查看最大连接数
+-   CLIENT LIST      //获取客户端列表
 
   
