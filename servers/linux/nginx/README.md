@@ -99,4 +99,35 @@ server
         }
     }
 
+https配置：
+切换到源码包：
+cd /opt//nginx-1.15.3
+查看nginx原有的模块
+/usr/local/nginx/sbin/nginx -V
+在configure arguments:后面显示的原有的configure参数如下：
+--prefix=/usr/local/nginx --with-http_stub_status_module
+那么我们的新配置信息就应该这样写：
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module
+配置完成后，运行命令
+make
+这里不要进行make install，否则就是覆盖安装
+然后备份原有已安装好的nginx
+cp /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak
+然后将刚刚编译好的nginx覆盖掉原有的nginx（这个时候nginx要停止状态）
+cp ./objs/nginx /usr/local/nginx/sbin/
+然后启动nginx，仍可以通过命令查看是否已经加入成功
+/usr/local/nginx/sbin/nginx -V
 ~~~
+
+
+--//查询nginx主进程号
+  $ ps -ef | grep nginx
+  
+  //从容停止Nginx：
+  $kill -QUIT 主进程号
+  
+  //快速停止Nginx：
+  kill -TERM 主进程号
+  
+  //强制停止Nginx：
+  pkill -9 nginx

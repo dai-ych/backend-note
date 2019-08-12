@@ -11,6 +11,9 @@
 -   make prefix=/usr/local/git all   // 指向目录编译
 -   make prefix=/usr/local/git install  //指向目录安装
 
+-   echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/profile
+-   source /etc/profile
+
 #####  如果是非root用户使用git，则需要配置下该用户下的环境变量
 -   [git@uatjenkins01 ~]$ echo "export PATH=$PATH:/usr/local/git/bin" >> ~/.bashrc
 -   [git@uatjenkins01 ~]$ source ~/.bashrc
