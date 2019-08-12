@@ -6,8 +6,8 @@
 
 #####  下载解压git后
 -   wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.21.0.tar.gz
--   tar -xzvf git.tar.gz
--   cd git-2.20.1
+-   tar -xzvf git-2.21.0.tar.gz
+-   cd git-2.21.0
 -   make prefix=/usr/local/git all   // 指向目录编译
 -   make prefix=/usr/local/git install  //指向目录安装
 
