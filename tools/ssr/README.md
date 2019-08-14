@@ -1,21 +1,42 @@
-####    指令
--   mvn clean -pl com.canopus.website:webapp-backend -am         对指定模块及其依赖模块打包
--   或者  mvn clean compile -U -pl webapp-backend -am                    
-~~~test
-参数	全称	释义	说明
--pl	--projects	Build specified reactor projects instead of all projects	
-选项后可跟随{groupId}:{artifactId}或者所选模块的相对路径(多个模块以逗号分隔)
+####    酸酸乳一键脚本
+-   wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 
--am	--also-make	If project list is specified, also build projects required by the list	
-表示同时处理选定模块所依赖的模块
+####    TCP一键加速脚本
+-   wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
--amd	--also-make-dependents	If project list is specified, also build projects that depend on projects on the list	
-表示同时处理依赖选定模块的模块
+####    MTproxy代理一键脚本
+-   wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/mtproxy_go.sh && chmod +x mtproxy_go.sh && bash mtproxy_go.sh
 
--N	--Non-recursive	Build projects without recursive	
-表示不递归子模块
+####    ipv6解析
+~~~text
+/etc/sysconfig/network-scripts/ifcfg-eth0
+添加
+---------------------------------------
+DEVICE=eth0
+ONBOOT=yes
+BOOTPROTO=static
+IPADDR=173.199.119.54
+NETMASK=255.255.255.0
+GATEWAY=173.199.119.1
+DNS1=108.61.10.10
 
--rf	--resume-from	Resume reactor from specified project	
-表示从指定模块开始继续处理
+IPV6INIT=yes
+IPV6ADDR="2001:19f0:5:6b70:5400:02ff:fe34:5eef/64"
+IPV6_AUTOCONF="yes"
+DNS2=2001:19f0:300:1704::6
+-----------------------------------
 
+/etc/sysconfig/network-scripts/route-eth0
+添加
+---------------------------------------
+169.254.0.0/16 dev eth0
+---------------------------------------
+重启：
+service network restart
+
+查询  sysctl -a | grep fastopen
+验证是否net.ipv4.tcp_fastopen=3
+不是则 vim /etc/sysctl.conf
+添加 net.ipv4.tcp_fastopen = 3   后ssr中可开启tcp加速
 ~~~
+
