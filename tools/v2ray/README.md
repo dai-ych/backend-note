@@ -19,4 +19,89 @@
 -      /usr/bin/v2ray/geoip.dat：IP 数据文件
 -      /usr/bin/v2ray/geosite.dat：域名数据文件
 -   5：启动服务：systemctl start v2ray
+-   6：检查配置：/usr/bin/v2ray/v2ray -test -config /etc/v2ray/config.json
 
+
+
+####    配置案例
+~~~~text
+{
+    "log": {
+        "access": "/opt/v2ray/info.log",
+        "error": "/opt/v2ray/warn.log",
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 23049,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "8a0b0538-b180-4055-8a73-7aa29147c549",
+                        "level": 1,
+                        "alterId": 64
+                    }
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+                "streamSettings": {
+                    "network": "tcp",
+                    "security": "none",
+                    "tlsSettings": {
+                        
+                    },
+                    "tcpSettings": {
+                        
+                    },
+                    "kcpSettings": {
+                        
+                    },
+                    "wsSettings": {
+                        
+                    },
+                    "httpSettings": {
+                        
+                    },
+                    "dsSettings": {
+                        
+                    },
+                    "quicSettings": {
+                        
+                    },
+                    "sockopt": {
+                        "mark": 0,
+                        "tcpFastOpen": true,
+                        "tproxy": "off"
+                    }
+                }
+            }
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {
+                
+            },
+            "tag": "blocked"
+        }
+    ],
+    "routing": {
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "blocked"
+            }
+        ]
+    }
+}
+
+
+~~~~

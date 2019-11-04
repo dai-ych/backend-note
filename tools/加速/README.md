@@ -5,7 +5,12 @@
 ####    部署
 
 
-
+####    tcp fast open
+-    查询  sysctl -a | grep fastopen
+-    验证是否net.ipv4.tcp_fastopen=3
+-    不是则 vim /etc/sysctl.conf
+-    添加 net.ipv4.tcp_fastopen = 3   后ssr/v2ray中可开启tcp加速
+-    sysctl -p 保存生效
 
 
 

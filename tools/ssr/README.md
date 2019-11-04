@@ -34,9 +34,5 @@ DNS2=2001:19f0:300:1704::6
 重启：
 service network restart
 
-查询  sysctl -a | grep fastopen
-验证是否net.ipv4.tcp_fastopen=3
-不是则 vim /etc/sysctl.conf
-添加 net.ipv4.tcp_fastopen = 3   后ssr中可开启tcp加速
 ~~~
 

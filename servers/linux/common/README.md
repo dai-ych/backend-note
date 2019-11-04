@@ -20,3 +20,9 @@
         <allow_active>yes</allow_active>
 </defaults>
 ~~~ 
+
+
+
+####    基本操作
+-   mkdir 创建目录
+-   touch 创建目录

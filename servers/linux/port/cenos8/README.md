@@ -5,7 +5,7 @@
 -   netstat -nlp |grep :8083        //查看端口是否被占用
 -   firewall-cmd --query-port=3306/tcp         //查询指定端口是否已开 
 -   firewall-cmd --zone=public --list-ports    // 查看已开放的全部端口
--   firewall-cmd --zone=public --remove-port=82/tcp --permanent      //关闭端口
+-   firewall-cmd --zone=public --remove-port=80/tcp --permanent      //关闭端口
 -   firewall-cmd --reload           //端口重新载入
 
 ####  二、简单介绍systemctl命令的使用
@@ -17,7 +17,7 @@
 -   systemctl enable name.service       //增加开机启动
 -   systemctl disable name.service      //删除开机启动
 
--  添加端口进防火墙： firewall-cmd --zone=public --add-port=3306/tcp --permanent
+-  添加端口进防火墙： firewall-cmd --zone=public --add-port=8000/tcp --permanent
 -  启动/重启/停止服务： systemctl start/restart/stop name.service
 -  查看服务状态：  systemctl status name.service
 
