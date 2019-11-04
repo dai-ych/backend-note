@@ -20,88 +20,80 @@
 -      /usr/bin/v2ray/geosite.dat：域名数据文件
 -   5：启动服务：systemctl start v2ray
 -   6：检查配置：/usr/bin/v2ray/v2ray -test -config /etc/v2ray/config.json
-
+-   7：使用此命令生成 MTProto 代理所需要的用户密钥：openssl rand -hex 16
 
 
 ####    配置案例
 ~~~~text
 {
-    "log": {
-        "access": "/opt/v2ray/info.log",
-        "error": "/opt/v2ray/warn.log",
-        "loglevel": "warning"
+  "log": {
+    "access": "/opt/v2ray/info.log",
+    "error": "/opt/v2ray/warn.log",
+    "loglevel": "warning"
+				     },
+  "inbounds": [{
+    "port": 23049,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "8a0b0538-b180-4055-8a73-7aa29147c549",
+          "level": 1,
+          "alterId": 128
+        }
+      ]
     },
-    "inbounds": [
-        {
-            "port": 23049,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "8a0b0538-b180-4055-8a73-7aa29147c549",
-                        "level": 1,
-                        "alterId": 64
-                    }
-                ]
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {
-                "streamSettings": {
-                    "network": "tcp",
-                    "security": "none",
-                    "tlsSettings": {
-                        
-                    },
-                    "tcpSettings": {
-                        
-                    },
-                    "kcpSettings": {
-                        
-                    },
-                    "wsSettings": {
-                        
-                    },
-                    "httpSettings": {
-                        
-                    },
-                    "dsSettings": {
-                        
-                    },
-                    "quicSettings": {
-                        
-                    },
-                    "sockopt": {
-                        "mark": 0,
-                        "tcpFastOpen": true,
-                        "tproxy": "off"
-                    }
-                }
-            }
-        },
-        {
-            "protocol": "blackhole",
-            "settings": {
-                
-            },
-            "tag": "blocked"
-        }
-    ],
-    "routing": {
-        "rules": [
-            {
-                "type": "field",
-                "ip": [
-                    "geoip:private"
-                ],
-                "outboundTag": "blocked"
-            }
-        ]
+    "streamSettings": {
+      "network": "tcp",
+      "security": "none",
+      "sockopt": {
+	 "mark": 0,
+         "tcpFastOpen": true,
+	 "tproxy": "off"
+      }
     }
+  },
+    {
+    "port":  8000,
+    "protocol": "mtproto",
+    "settings": {
+      "users": [
+	{"secret": "dd240064237845e9548edb25ac8c9942"}
+      ]	
+    },
+    "tag": "mttag-in"
+    }],
+  "outbounds": [
+    {
+    "protocol": "freedom",
+    "settings": {}
+  },
+    {
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "blocked"
+  },{
+    "protocol": "mtproto",
+    "tag": "mttag-out",
+    "settings": {}
+  }],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": ["geoip:private"],
+        "outboundTag": "blocked"
+      },
+      {
+	"type": "field",
+        "inboundTag": ["mttag-in"],
+	"outboundTag": "mttag-out"
+      }
+    ]
+  }
 }
+
+
 
 
 ~~~~
