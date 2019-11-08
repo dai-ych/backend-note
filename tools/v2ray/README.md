@@ -3,7 +3,6 @@
 -   https://steemit.com/@v2ray      博客
 -   bash <(curl -L -s https://install.direct/go.sh)    官方安装脚本
 -   https://github.com/v2ray/v2ray-core/releases      客户端下载
--   bash <(curl -s -L https://git.io/v2ray.sh)        一键脚本
 -   可视化界面一键脚本V2ray.Fun  wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh && bash install.sh  
 -   V2rayN Windows可视化客户端：https://github.com/2dust/v2rayN/releases
 -   journalctl -u v2ray    查看退出时的日志
@@ -92,8 +91,53 @@
     ]
   }
 }
-
-
-
-
 ~~~~
+
+
+###     bash <(curl -s -L https://git.io/v2ray.sh)        一键脚本
+-   客户端下载
+    V2RayNG android
+    
+    https://github.com/2dust/v2rayNG/releases
+    V2RayW Win
+    
+    https://github.com/Cenmrev/V2RayW/releases
+    V2RayN Win
+    
+    https://github.com/2dust/v2rayN/releases
+    V2RayX MAC
+    
+    https://github.com/Cenmrev/V2RayX
+    管理命令
+    v2ray info 查看 V2Ray 配置信息
+    
+    v2ray config 修改 V2Ray 配置
+    
+    v2ray link 生成 V2Ray 配置文件链接
+    
+    v2ray infolink 生成 V2Ray 配置信息链接
+    
+    v2ray qr 生成 V2Ray 配置二维码链接
+    
+    v2ray ss 修改 Shadowsocks 配置
+    
+    v2ray ssinfo 查看 Shadowsocks 配置信息
+    
+    v2ray ssqr 生成 Shadowsocks 配置二维码链接
+    
+    v2ray status 查看 V2Ray 运行状态
+    
+    v2ray start 启动 V2Ray
+    
+    v2ray stop 停止 V2Ray
+    
+    v2ray restart 重启 V2Ray
+    
+    v2ray log 查看 V2Ray 运行日志
+    
+    v2ray update 更新 V2Ray
+    
+    v2ray update.sh 更新 V2Ray 管理脚本
+    
+    v2ray uninstall 卸载 V2Ray
+
