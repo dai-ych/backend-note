@@ -36,3 +36,4 @@ service network restart
 
 ~~~
 
+-   centos8 修改 /etc/init.d/ssr   的python为python3

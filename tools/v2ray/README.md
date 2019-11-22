@@ -22,6 +22,13 @@
 -   7：使用此命令生成 MTProto 代理所需要的用户密钥：openssl rand -hex 16
 
 
+
+####    第三方脚本
+-   地址：https://github.com/Jrohy/multi-v2ray
+-   安装命令：source <(curl -sL https://git.io/fNgqx) --zh
+
+
+
 ####    配置案例
 ~~~~text
 {
@@ -46,9 +53,9 @@
       "network": "tcp",
       "security": "none",
       "sockopt": {
-	 "mark": 0,
-         "tcpFastOpen": true,
-	 "tproxy": "off"
+	      "mark": 0,
+          "tcpFastOpen": true,
+	      "tproxy": "off"
       }
     }
   },
