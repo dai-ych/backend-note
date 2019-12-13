@@ -120,6 +120,8 @@ read_rnd_buffer_size = 8M
 #table_cache = 128
 # 自动清理日志
 expire_logs_days=7
+# 不区分大小写
+lower_case_table_names=1
 
 [mysql]
 # 设置mysql客户端默认字符集
