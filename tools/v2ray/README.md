@@ -24,8 +24,11 @@
 
 
 ####    第三方脚本
--   地址：https://github.com/Jrohy/multi-v2ray
--   安装命令：source <(curl -sL https://git.io/fNgqx) --zh
+-   地址：https://github.com/Jrohy/multi-v2ray   有TFO
+-   安装命令：source <(curl -sL https://multi.netlify.com/v2ray.sh) --zh
+
+-   地址：https://github.com/233boy   无TFO
+-   命令：bash <(curl -s -L https://git.io/v2ray.sh)
 
 
 

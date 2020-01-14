@@ -26,3 +26,9 @@
 ####    基本操作
 -   mkdir 创建目录
 -   touch 创建目录
+
+
+####    基础工具包
+-   dnf groupinfo "Development Tools"  查看工具包列表
+-   dnf group install "Development Tools"  安装开发工具包
+-   dnf group remove "Development Tools"  去除工具包

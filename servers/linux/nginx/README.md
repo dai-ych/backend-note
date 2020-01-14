@@ -3,13 +3,29 @@
 -   yum install -y pcre pcre-devel
 -   yum install -y zlib zlib-devel
 -   yum install -y openssl openssl-devel
+-   或者 dnf group install "Development Tools"  安装开发工具包
+-   dnf groupinfo "Development Tools"  查看工具包列表
+-   dnf group remove "Development Tools"  去除工具包
 
 ####    nginx下载
 -   https://nginx.org/en/download.html       //下载页
--   wget https://nginx.org/download/nginx-1.15.9.tar.gz
+-   wget https://nginx.org/download/nginx-1.17.7.tar.gz
+-   tar -xzvf 解压
+-   openssl version -a  查看openssl版本
 
 ####    配置
--   ./configure --prefix=/usr/local/nginx/      // 未指定路径时默认安装在/usr/local/nginx/
+-   未指定路径时默认安装在/usr/local/nginx
+-   ./configure --prefix=/usr/local/nginx                           \
+                --pid-path=/usr/local/nginx/nginx.pid               \
+                --with-http_ssl_module                              \
+                --with-http_gzip_static_module                      \
+                --with-http_stub_status_module                      \
+                --with-pcre                                         \
+                --with-http_realip_module                           \
+                --with-http_flv_module                              \
+                --with-http_mp4_module                              \
+                --with-http_secure_link_module                      \
+                --with-http_v2_module                             
 ```text
 nginx path prefix: "/usr/local/nginx"
 nginx binary file: "/usr/local/nginx/sbin/nginx"
