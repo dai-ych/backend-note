@@ -1,5 +1,6 @@
 ####    环境安装
--   yum install gcc-c++
+-   yum install gcc gcc-c++
+-   yum install gcc gcc-c++ autoconf automake
 -   yum install -y pcre pcre-devel
 -   yum install -y zlib zlib-devel
 -   yum install -y openssl openssl-devel
@@ -9,7 +10,7 @@
 
 ####    nginx下载
 -   https://nginx.org/en/download.html       //下载页
--   wget https://nginx.org/download/nginx-1.17.7.tar.gz
+-   wget https://nginx.org/download/nginx-1.17.7.tar.gz -P /opt
 -   tar -xzvf 解压
 -   openssl version -a  查看openssl版本
 
@@ -66,7 +67,7 @@ chmod 755 rc.local
 
 
 ####  增加nginx systemctl启动：
--    在/usr/lib/systemd/system目录下增加nginx.service：
+-   touch /usr/lib/systemd/system/nginx.service
 ```text
 [Unit]
 Description=nginx 
@@ -78,9 +79,9 @@ Type=forking
 PIDFile=/usr/local/nginx/logs/nginx.pid
 ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf
 ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ExecStartPost=/bin/sleep 0.5
 ExecReload=/usr/local/nginx/sbin/nginx -s reload
 ExecStop=/usr/local/nginx/sbin/nginx -s stop
-ExecQuit=/usr/local/nginx/sbin/nginx -s quit
 PrivateTmp=true
 
 [Install]

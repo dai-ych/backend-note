@@ -17,7 +17,7 @@
 -   systemctl enable name.service       //增加开机启动
 -   systemctl disable name.service      //删除开机启动
 
--  添加端口进防火墙： firewall-cmd --zone=public --add-port=8000/tcp --permanent
+-  添加端口进防火墙： firewall-cmd --zone=public --add-port=443/tcp --permanent
 -  启动/重启/停止服务： systemctl start/restart/stop name.service
 -  查看服务状态：  systemctl status name.service
 

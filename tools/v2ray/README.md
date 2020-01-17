@@ -30,6 +30,8 @@
 -   地址：https://github.com/233boy   无TFO
 -   命令：bash <(curl -s -L https://git.io/v2ray.sh)
 
+-   地址：https://github.com/wulabing/V2Ray_ws-tls_bash_onekey 
+-   命令：wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
 
 
 ####    配置案例
