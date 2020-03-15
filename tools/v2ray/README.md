@@ -103,6 +103,14 @@
     ]
   }
 }
+
+ss默认配置
+IP: www.vpeve.xyz
+Port: 443
+TLS: 开启
+UUID: 0efe4e00-669d-11ea-b0d9-5600029e59e6
+Alter ID: 2
+Network: WebSocket host: www.vpeve.xyz, path: /03TIu7HX/
 ~~~~
 
 
