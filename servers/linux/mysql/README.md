@@ -33,7 +33,7 @@
 
 ####  七、登陆mysql
 -   mysql -u root -p
--   初次登陆必须修改密码：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root@123456';
+-   初次登陆必须修改密码：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Mysql@123';
 -   刷新：flush privileges;    
 -   退出：exit;
 
@@ -41,7 +41,7 @@
 -   mysqld --verbose --help   查看配置项
 
 ####  创建用户
--   select host,user,authentication_string,plugin from user;  //查询用户信息
+-   select host,user,authentication_string,plugin from mysql.user;  //查询用户信息
 -   update user set authentication_string='*E32A671056805EBAD613F4090727279564EED370',plugin='mysql_native_password',host='%';  修改加密方式和远程登陆权限
 -   create user '[用户名]'@'[localhost]'
 
@@ -81,7 +81,7 @@
 ```text
 [mysqld]
 # 密码永不过期
-default_password_lifetime=0
+default_password_lifetime = 0
 # 授权自动激活
 activate_all_roles_on_login = true
 # 允许连接失败的次数
@@ -94,6 +94,10 @@ character-set-server=utf8mb4
 default-storage-engine=INNODB
 # 默认使用“mysql_native_password”插件认证
 default_authentication_plugin=mysql_native_password
+# 自动清理日志
+expire_logs_days=7
+# 不区分大小写
+lower_case_table_names=1
 
 datadir=/var/lib/mysql
 socket=/var/lib/mysql/mysql.sock
@@ -118,10 +122,7 @@ read_rnd_buffer_size = 8M
 #innodb_log_buffer_size = 2M
 #innodb_log_files_in_group = 3
 #table_cache = 128
-# 自动清理日志
-expire_logs_days=7
-# 不区分大小写
-lower_case_table_names=1
+
 
 [mysql]
 # 设置mysql客户端默认字符集

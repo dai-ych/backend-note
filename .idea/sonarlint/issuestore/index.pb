@@ -1,8 +1,6 @@
 
 C
 tools/Redis/lock.md,7\8\786f73c551ad615f99ea73aa411a39a370d093b1
-S
-#servers/linux/port/cenos7/README.md,3\a\3ab14cc5a5f54b3afeec39c56b74cbe9eefabf64
 N
 servers/linux/tomcat/README.md,1\4\143e61194c08e4ec69e6e2a2d3a84a62123bf9c8
 M
@@ -23,3 +21,7 @@ L
 tools/Git/git常用命令.md,1\e\1ef1f0647109e3f8f7fa9eb16b581c8819a7f996
 K
 servers/linux/jdk/README.md,b\4\b4f337b3731f92faab6dc65da2a1bd51303995b9
+O
+servers/linux/jenkins/README.md,0\5\0541b106370e012396dc262723ea373a3d9284da
+S
+#servers/linux/port/cenos8/README.md,4\a\4ae33513b02208ca389e8278c5c96011f3f8ae92
