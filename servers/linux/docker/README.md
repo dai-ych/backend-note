@@ -7,7 +7,13 @@
 -   找到MergedDir 下路径，进入 diff/etc/mysql 后修改 my.cnf
 -   保存后重启mysql
 
-####   
+-   进入容器：docker exec -it mysql8.0 bash
+
+
+####    安装使用jenkins
+-   1.安装
+-   2.  docker pull jenkins/jenkins:lts;        拉取最新版镜像
+-   3.  docker images;                          查看已经安装的jenkins镜像      
 
 
 

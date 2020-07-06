@@ -1,13 +1,16 @@
-##  linux JDK环境集成
-        
+##  centOS8 JDK环境集成
+-   last updateTime: 2020.7.6
 ####  一、下载jdk
-https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
--   wget https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz?AuthParam=1552038133_4fd3de3f52034ebf98b4c26f3ce5b990
+-   yum list java-1.8*      检查 yum 中有没有 java1.8 包
+-   yum install java-1.8.0-openjdk* -y      开始安装
+-   java -version           版本验证
+-   /usr/lib/jvm            JDK默认安装路径
 
 -   /etc/profile
+
 ```text
-export JAVA_HOME=/opt/jdk1.8
-export JRE_HOME=/opt/jdk1.8/jre
+export JAVA_HOME=/usr/lib/jvm/jdk1.8
+export JRE_HOME=${JAVA_HOME}/jre
 export CATALINA_HOME=/opt/tomcat8
 export CATALINA_BASE=/opt/tomcat8
 export TOMCAT_HOME=/opt/tomcat8
@@ -18,3 +21,5 @@ export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
 export PATH=$PATH:${JAVA_HOME}/bin:${JRE_HOME}/bin:${CATALINA_HOME}/bin:${CATALINA_BASE}/bin:${TOMCAT_HOME}/bin:${M2_HOME}/bin:${GIT_HOME}/bin
 
 ```
+
+-   source  /etc/profile       保存生效
