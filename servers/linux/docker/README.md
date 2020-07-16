@@ -17,8 +17,9 @@
 
 
 
-####    普通账号通过systemctl管理服务需要输入root密码
-
+####    进入容器
+-   docker exec -it jenkins /bin/bash
+-   apt-get update && apt-get install vim   容器内安装vim
 
 
 ####    基本操作

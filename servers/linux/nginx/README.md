@@ -148,3 +148,12 @@ cp ./objs/nginx /usr/local/nginx/sbin/
   
   //强制停止Nginx：
   pkill -9 nginx
+
+
+####    docker 安装
+-   docker pull nginx:latest
+-   docker run --name nginx -p 80:80 -d nginx    默认后台运行
+-   docker exec -it nginx bash       进入容器
+-   /etc/nginx                  配置目录
+-   /usr/share/nginx/html       默认首页
+-   /var/log/nginx              默认日志文件
