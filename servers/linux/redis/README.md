@@ -3,8 +3,8 @@
 
 #####  下载解压redis
 -   cd /usr/local
--   wget http://120.52.51.19/download.redis.io/releases/redis-5.0.3.tar.gz
--   tar -xzvf redis-5.0.3.tar.gz /usr/local/redis
+-   wget http://download.redis.io/releases/redis-6.0.5.tar.gz
+-   tar -xzvf redis-6.0.5.tar.gz /usr/local/redis
 -   cd redis
 -   make MALLOC=libc   // 编译
 -   cd src

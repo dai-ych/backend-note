@@ -10,7 +10,7 @@
 
 ####    nginx下载
 -   https://nginx.org/en/download.html       //下载页
--   wget https://nginx.org/download/nginx-1.17.7.tar.gz -P /opt
+-   wget https://nginx.org/download/nginx-1.19.1.tar.gz -P /opt
 -   tar -xzvf 解压
 -   openssl version -a  查看openssl版本
 
@@ -68,6 +68,10 @@ chmod 755 rc.local
 
 ####  增加nginx systemctl启动：
 -   touch /usr/lib/systemd/system/nginx.service
+-   chmod 777 /usr/lib/systemd/system/nginx.service 
+-   systemctl daemon-reload
+-   nginx -t -c /usr/local/nginx/conf/nginx.conf   检验配置文件
+
 ```text
 [Unit]
 Description=nginx 
@@ -86,9 +90,7 @@ PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
-```
--   chmod 755 nginx.service 
--   systemctl daemon-reload
+```           
 
 
 ####    验证nginx配置文件是否正确

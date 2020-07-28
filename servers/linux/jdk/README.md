@@ -1,10 +1,13 @@
 ##  centOS8 JDK环境集成
 -   last updateTime: 2020.7.6
-####  一、下载jdk
+####  yum 安装 jdk
 -   yum list java-1.8*      检查 yum 中有没有 java1.8 包
 -   yum install java-1.8.0-openjdk* -y      开始安装
 -   java -version           版本验证
 -   /usr/lib/jvm            JDK默认安装路径
+
+-   ln -s /opt/jdk1.8.0_261/bin/java /usr/bin/java
+
 
 -   /etc/profile
 

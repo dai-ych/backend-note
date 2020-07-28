@@ -56,3 +56,20 @@ nohup java -jar $JARFILE >$DIR$LOG 2>&1 &
 cd $DIR
 ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
 ~~~
+
+####    rpm安装
+-   wget https://pkg.jenkins.io/redhat-stable/jenkins-2.235.2-1.1.noarch.rpm 
+-   rpm -ivh jenkins-2.235.2-1.1.noarch.rpm                 指定安装路径
+
+~~~~text
+默认安装路径
+/usr/lib/jenkins/jenkins.war           war包
+/etc/sysconfig/jenkins                 jenkins配置文件
+/var/lib/jenkins/                      默认的JENKINS_HOME目录
+/var/log/jenkins/jenkins.log           Jenkins日志文件
+~~~~
+
+~~~~text
+cp -r /var/lib/jenkins/workspace/canopus-web /opt/project/    复制项目文件
+  
+~~~~

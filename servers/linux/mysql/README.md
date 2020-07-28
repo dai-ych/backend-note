@@ -134,6 +134,10 @@ default-character-set=utf8mb4
 
 ```
 
-
+####    docker 安装
+-   docker inspect mysql8.0    查看容器所在的物理路径
+-   找到 MergedDir 下路径，进入 diff/etc/mysql 后修改 my.cnf
+-   /var/lib/docker/overlay2/c1ba7f3c095b18b6f4090f403cf5bb30edb1f67fac000ea449df51cc9e7c9895/diff/etc/mysql
+-   docker restart mysql8.0   保存后重启
 
 
