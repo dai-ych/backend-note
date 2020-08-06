@@ -80,6 +80,8 @@
 ####  mysql8  配置文件  windows - my.ini   linux - /etc/my.cnf
 ```text
 [mysqld]
+# 默认+8时区
+default-time-zone = '+8:00'
 # 密码永不过期
 default_password_lifetime = 0
 # 授权自动激活
@@ -95,7 +97,10 @@ default-storage-engine=INNODB
 # 默认使用“mysql_native_password”插件认证
 default_authentication_plugin=mysql_native_password
 # 自动清理日志
-expire_logs_days=7
+expire_logs_days=1
+# 关闭general日志
+general-log=0
+
 # 不区分大小写
 lower_case_table_names=1
 
@@ -107,7 +112,7 @@ pid-file=/var/run/mysqld/mysqld.pid
 port=3306
 
 skip-name-resolve
-max_allowed_packet = 500M
+max_allowed_packet = 100M
 wait_timeout=2880000
 interactive_timeout = 2880000
 tmp_table_size = 256M
@@ -139,5 +144,7 @@ default-character-set=utf8mb4
 -   找到 MergedDir 下路径，进入 diff/etc/mysql 后修改 my.cnf
 -   /var/lib/docker/overlay2/c1ba7f3c095b18b6f4090f403cf5bb30edb1f67fac000ea449df51cc9e7c9895/diff/etc/mysql
 -   docker restart mysql8.0   保存后重启
+-   reset master;  重置数据库日志
+
 
 

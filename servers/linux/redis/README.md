@@ -30,7 +30,7 @@ allkeys->random -> 无差别随机删。
 volatile-ttl -> 根据最近过期时间来删除（辅以TTL）
 noeviction -> 谁也不删，直接在写操作时返回错误
 ~~~
--   /usr/local/bin/redis-server /usr/local/redis/redis.conf       //指定redis.conf文件启动
+-   /usr/local/bin/redis-server /usr/local/redis-6.0.5/redis.conf       //指定redis.conf文件启动
 
 
 ####    查看进程
@@ -54,7 +54,7 @@ Type=forking
 PIDFile=/var/run/redis_6379.pid
 #启动服务的命令
 #redis-server安装的路径 和 redis.conf配置文件的路径
-ExecStart=/usr/local/bin/redis-server /usr/local/redis/redis.conf
+ExecStart=/usr/local/bin/redis-server /usr/local/redis-6.0.5/redis.conf
 #重新加载命令
 ExecReload=/bin/kill -s HUP $MAINPID
 #停止服务的命令

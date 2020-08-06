@@ -8,6 +8,7 @@
 
 ####   
 -   /etc/sudoers    设置权限
+-   du -h –max-depth=1 /    查看文件夹下文件大小
 
 
 ####    普通账号通过systemctl管理服务需要输入root密码

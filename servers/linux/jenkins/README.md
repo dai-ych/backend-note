@@ -38,13 +38,13 @@ ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
 
 ~~~text
 LOG=catalina$(date +%Y%m%d).log
-JARDIR=/usr/local/tomcat/webapps/jenkins/workspace/canopus/webapp-backend/target/
-DIR=/usr/local/tomcat/project/canopus-backend/
-JARFILE=webapp-backend-1.0.0-SNAPSHOT.jar
+JARDIR=/var/lib/jenkins/workspace/canopus/canopus-backend/target/
+DIR=/opt/project/canopus/
+JARFILE=canopus-1.0.0-SNAPSHOT.jar
 
 cd $JARDIR
 
-pid=`ps -ef | grep webapp-backend-1.0.0-SNAPSHOT.jar | grep -v grep | awk '{print $2}'`
+pid=`ps -ef | grep canopus-1.0.0-SNAPSHOT.jar | grep -v grep | awk '{print $2}'`
 if [ -n "$pid" ]
 then
    kill -9 $pid
@@ -56,6 +56,8 @@ nohup java -jar $JARFILE >$DIR$LOG 2>&1 &
 cd $DIR
 ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
 ~~~
+
+-   clean install -Dmaven.test.skip=true -Ptest      排除测试的包内容，使用后缀为 test 的配置文件
 
 ####    rpm安装
 -   wget https://pkg.jenkins.io/redhat-stable/jenkins-2.235.2-1.1.noarch.rpm 
