@@ -89,7 +89,7 @@ activate_all_roles_on_login = true
 # 允许连接失败的次数
 max_connect_errors=1000
 # 允许最大连接数
-max_connections=200
+max_connections=100
 # 服务端使用的字符集默认为utf8mb4
 character-set-server=utf8mb4
 # # 创建新表时将使用的默认存储引擎
@@ -100,6 +100,9 @@ default_authentication_plugin=mysql_native_password
 expire_logs_days=1
 # 关闭general日志
 general-log=0
+# 关闭Bin-log
+skip-log-bin
+sql_mode ='STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION'
 
 # 不区分大小写
 lower_case_table_names=1
@@ -144,7 +147,16 @@ default-character-set=utf8mb4
 -   找到 MergedDir 下路径，进入 diff/etc/mysql 后修改 my.cnf
 -   /var/lib/docker/overlay2/c1ba7f3c095b18b6f4090f403cf5bb30edb1f67fac000ea449df51cc9e7c9895/diff/etc/mysql
 -   docker restart mysql8.0   保存后重启
+-   /var/lib/docker/volumes/a150456ae7f25a0d91fade5f8c3cae34390029f9030bf300bd82a0852581d3a1/_data  进入日志目录
 -   reset master;  重置数据库日志
+-   show variables like 'log_bin';    查看bin-log 是否开启
+
+
+####    操作
+-   show databases;   查看全部数据库
+-   use databases;
+
+
 
 
 
