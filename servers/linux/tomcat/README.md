@@ -7,6 +7,7 @@
 -   https://tomcat.apache.org/download-80.cgi
 -   wget https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz
 -   tar -xzvf 解压
+-   mv apache-tomcat-9.0.38 tomcat
 -   8.5.38版本无法生成pid文件
 
 ####    修改参数
