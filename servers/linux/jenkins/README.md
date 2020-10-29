@@ -69,6 +69,7 @@ ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
 /etc/sysconfig/jenkins                 jenkins配置文件
 /var/lib/jenkins/                      默认的JENKINS_HOME目录
 /var/log/jenkins/jenkins.log           Jenkins日志文件
+/var/cache/jenkins/war/WEB-INF/lib/    包地址
 ~~~~
 
 ~~~~text
